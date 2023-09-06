@@ -1,19 +1,8 @@
 public class lab2 {
-    public static void main(String[] args) {
-        // Вхідний масив рядків
-        String[] strings = {"Ну", "І", "ВеЛиКі", "ЛІТЕРИ", "я їх ненавиджу"};
 
-        // Сортування масиву за кількістю великих літер у кожному рядку
-        bubbleSort(strings);
-
-        // Виведення відсортованого масиву
-        for (String str : strings) {
-            System.out.println(str);
-        }
-    }
 
     // Реалізація сортування бульбашкою
-    private static void bubbleSort(String[] arr) {
+    public static void bubbleSort(String[] arr) {
         int n = arr.length;
         boolean swapped;
         do {
