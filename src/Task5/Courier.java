@@ -1,4 +1,4 @@
-package lab5;
+package Task5;
 
 public class Courier {
     private String address;
