@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-import static java.lang.System.err;
+public class Lab1 {
 
-public class lab1 {
+    public static final String OPERATOR_MESSAGE = " (+, -, *, /): ";
 
     public static double getInputNumber(String message) {
         System.out.print(message);
@@ -10,29 +10,35 @@ public class lab1 {
     }
 
     public static String getOperator() {
-        System.out.print("Введіть операцію (+, -, *, /): ");
+        System.out.print(OPERATOR_MESSAGE);
         return new Scanner(System.in).next();
     }
 
     public static double calculate(double num1, String operator, double num2) {
+        final String ADDITION = "+";
+        final String SUBTRACTION = "-";
+        final String MULTIPLICATION = "*";
+        final String DIVISION = "/";
+
         switch (operator) {
-            case "+":
+            case ADDITION:
                 return num1 + num2;
-            case "-":
+            case SUBTRACTION:
                 return num1 - num2;
-            case "*":
+            case MULTIPLICATION:
                 return num1 * num2;
-            case "/":
+            case DIVISION:
                 if (num2 == 0) {
-                    throw new ArithmeticException("Ділення на 0 недопустиме.");
+                    throw new ArithmeticException("Dividing by zero error.");
                 }
                 return num1 / num2;
             default:
-                throw new IllegalArgumentException("Введено невірний знак операції.");
+                throw new IllegalArgumentException("Illegal operation.");
         }
     }
 
     public static void displayResult(double result) {
-        System.out.println("Результат: " + result);
+        System.out.println("Result: " + result);
     }
+
 }

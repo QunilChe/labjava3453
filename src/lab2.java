@@ -1,16 +1,14 @@
 public class lab2 {
 
-
-    // Реалізація сортування бульбашкою
-    public static void bubbleSort(String[] arr) {
-        int n = arr.length;
+    // buble sort
+    public static void bubbleSort(final String[] arr) {
         boolean swapped;
         do {
             swapped = false;
-            for (int i = 1; i < n; i++) {
+            for (int i = 1; i < arr.length; i++) {
                 if (countUppercaseLetters(arr[i - 1]) > countUppercaseLetters(arr[i])) {
                     // Обмін елементів, якщо потрібно
-                    String temp = arr[i - 1];
+                    final String temp = arr[i - 1];
                     arr[i - 1] = arr[i];
                     arr[i] = temp;
                     swapped = true;
@@ -19,8 +17,8 @@ public class lab2 {
         } while (swapped);
     }
 
-    // Рахування кількості великих літер у рядку
-    private static int countUppercaseLetters(String str) {
+    // how much big symbols
+    private static int countUppercaseLetters(final String str) {
         int count = 0;
         for (char c : str.toCharArray()) {
             if (Character.isUpperCase(c)) {

@@ -21,8 +21,8 @@ public class Main {
                 String operator = "/";
                 double num2 = 2;
 
-                double result = lab1.calculate(num1, operator, num2);
-                lab1.displayResult(result);
+                double result = Lab1.calculate(num1, operator, num2);
+                Lab1.displayResult(result);
 
             } catch (Exception e) {
                 err.println("exception: " + e.getMessage());
